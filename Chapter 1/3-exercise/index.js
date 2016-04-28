@@ -19,12 +19,12 @@ mongodb.MongoClient.connect(uri, function(error, db) {
         screenplay: ['Peter Benchlay', 'Carl Gotlieb']
     }
 
-    // db.collection('movies').insert(doc, function(error, docs) {
-    //     if (error) {
-    //         console.log(error);
-    //         process.exit(1);
-    //     }
-    // });
+    db.collection('movies').insert(doc, function(error, docs) {
+        if (error) {
+            console.log(error);
+            process.exit(1);
+        }
+    });
 
     var query = {
          year: 1991, rating: 'PG'
